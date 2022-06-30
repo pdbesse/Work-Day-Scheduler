@@ -5,12 +5,20 @@ $("#currentDay").text(today.format("dddd MMMM Do, YYYY"));
 // AtC button saves to local storage
     // need to link text area input to each corresponding button
 
-$("#9btn").on("click", function (){
+/* $("#9btn").on("click", function (event){
     var text9 = $("#9am").children("textarea").val();
     var time = $("#9am").children(".hour").text()
 
-    localStorage.setItem(time, text9);
-})
+    localStorage.setItem(time, text9); */
+
+    $(".saveBtn").click(function(event) {
+        var calEvent = $(event.target).sibling("textarea").val;
+        var calEventTime = $(event.target).sibling(".hour").text;
+        
+        localStorage.setItem(calEventTime, calEvent);
+
+    })
+/* }) */
 
 $("#10btn").on("click", function (){
     var text10 = $("#10am").children("textarea").val();
