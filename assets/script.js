@@ -16,22 +16,28 @@ $(".saveBtn").on("click", function() {
 // pseudocode with tutor Joe Young
 // pull out hour from moment
 var realHour = moment().format("H");
-console.log(realHour);
+    console.log(realHour);
 // pull attribute from HTML, .each
+// for loop to repeat time comparison logic - use "this"
 $(".hour").each(function (){
 //parseInt() look at .split or .splice
-var currentHour = parseInt($(this).text().split(" AM")[0]);
-console.log(currentHour);
+    var currentHour = parseInt($(this).text().split(" AM")[0]);
+    console.log(currentHour);
 
-// for loop to repeat time comparison logic - use "this"
-
-// var hour < current hour = red
 // func to turn past events red
+if (currentHour < realHour) {
+    (this).addClass(".past") 
+}
 
 // hour = current hour = green
-// func to turn current hour different color
+else if (currentHour === realHour) {
+    (this).addClass(".present")
+}
 
 /// hour > current = blue
+else {
+    (this).addClass(".future")
+}
 })
 
 
