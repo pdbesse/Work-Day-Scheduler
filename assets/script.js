@@ -13,25 +13,28 @@ $(".saveBtn").on("click", function() {
 
 // have entered text persist in each time block on page reload
 
-// func to turn past events red
-// func to turn current hour different color
-// func to turn future hours different color
-
-
+// pseudocode with tutor Joe Young
+var realTime = moment().format("H")
+console.log(realTIme)
 // pull attribute from HTML, .each
 $(".hour").each(function (){
 //parseInt() look at .split or .splice
-parseInt()
+parseInt(".hour".text).split(" AM");
 // pull out hour from moment
+
 // for loop to repeat time comparison logic - use "this"
+
 // var hour < current hour = red
 // func to turn past events red
+
 // hour = current hour = green
 // func to turn current hour different color
+
 /// hour > current = blue
 })
 
 
 // local.Storage.getItem
+
 
 // add MT id to times
