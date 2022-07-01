@@ -22,22 +22,22 @@ var realHour = moment().format("H");
 $(".hour").each(function (){
 //parseInt() look at .split or .splice
     var currentHour = parseInt($(this).attr("id").split("hour-")[1]);
-    console.log($(this).attr("id").split("hour-"));
-    console.log(currentHour);
+    /* console.log($(this).attr("id").split("hour-")[1]);
+    console.log(currentHour); */
 
 // func to turn past events red
 if (currentHour < realHour) {
-    $(this).addClass(".past") 
+    $(this).siblings(".description").addClass(".past"); 
 }
 
 // hour = current hour = green
 else if (currentHour === realHour) {
-    $(this).addClass(".present")
+    $(this).siblings(".description").addClass(".present");
 }
 
 /// hour > current = blue
 else if (currentHour > realHour) {
-    $(this).addClass(".future")
+    $(this).siblings(".description").addClass(".future");
 }
 })
 
