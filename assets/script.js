@@ -26,17 +26,17 @@ $(".hour").each(function (){
 
 // func to turn past events red
 if (currentHour < realHour) {
-    (this).addClass(".past") 
+    $(this).addClass(".past") 
 }
 
 // hour = current hour = green
 else if (currentHour === realHour) {
-    (this).addClass(".present")
+    $(this).addClass(".present")
 }
 
 /// hour > current = blue
-else {
-    (this).addClass(".future")
+else if (currentHour > realHour) {
+    $(this).addClass(".future")
 }
 })
 
