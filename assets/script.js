@@ -21,7 +21,8 @@ var realHour = moment().format("H");
 // for loop to repeat time comparison logic - use "this"
 $(".hour").each(function (){
 //parseInt() look at .split or .splice
-    var currentHour = parseInt($(this).text().split(" AM")[0]);
+    var currentHour = parseInt($(this).attr("id").split("hour-")[1]);
+    console.log($(this).attr("id").split("hour-"));
     console.log(currentHour);
 
 // func to turn past events red
