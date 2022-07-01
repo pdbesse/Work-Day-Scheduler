@@ -27,17 +27,17 @@ $(".hour").each(function (){
 
 // func to turn past events red
 if (currentHour < realHour) {
-    $(this).siblings(".description").addClass(".past"); 
+    $(this).siblings(".description").addClass("past"); 
 }
 
 // hour = current hour = green
-else if (currentHour === realHour) {
-    $(this).siblings(".description").addClass(".present");
+else if (currentHour == realHour) {
+    $(this).siblings(".description").addClass("present");
 }
 
 /// hour > current = blue
 else if (currentHour > realHour) {
-    $(this).siblings(".description").addClass(".future");
+    $(this).siblings(".description").addClass("future");
 }
 })
 
