@@ -14,13 +14,14 @@ $(".saveBtn").on("click", function() {
 // have entered text persist in each time block on page reload
 
 // pseudocode with tutor Joe Young
-var realTime = moment().format("H")
-console.log(realTIme)
+// pull out hour from moment
+var realHour = moment().format("H");
+console.log(realHour);
 // pull attribute from HTML, .each
 $(".hour").each(function (){
 //parseInt() look at .split or .splice
-parseInt(".hour".text).split(" AM");
-// pull out hour from moment
+var currentHour = parseInt($(this).text().split(" AM")[0]);
+console.log(currentHour);
 
 // for loop to repeat time comparison logic - use "this"
 
